@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="<!-- $description -->">
+  <meta property="og:image" content="<!-- @path Logo.png -->">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pin Up Curls ~ <!-- $title --></title>
+	<link rel="apple-touch-icon" href="<!-- @path apple-touch-icon.png -->">
+	<link rel="icon" type="image/png" href="<!-- @path favicon-196x196 -->" sizes="196x196">
+	<link rel="icon" type="image/png" href="<!-- @path favicon-160x160 -->" sizes="160x160">
+	<link rel="icon" type="image/png" href="<!-- @path favicon-96x96 -->" sizes="96x96">
+	<link rel="icon" type="image/png" href="<!-- @path favicon-32x32 -->" sizes="32x32">
+	<link rel="icon" type="image/png" href="<!-- @path favicon-16x16 -->" sizes="16x16">
+  <!--[if IE]>
+  <!-- @javascript html5shiv -->
+  <![endif]-->
+  <!-- @stylesheet normalize style -->
+  <!-- @reload -->  
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJSEvOEuVKcVnPELZS5tKSLqY7zcWL_uE&sensor=true"></script>
+	<script type="text/javascript">
+		function initialize() 
+		{
+			var map = new google.maps.Map($(".contains-map")[0], mapOptions()),
+					locations = mapMarkers(),
+					i = 0;    
+		
+			while (i < locations.length)
+			{
+				var markerImage = $(".location-marker-"+locations[i][3]).attr("src");
+				
+				var marker = new google.maps.Marker(
+				{
+					icon: new google.maps.MarkerImage(markerImage, null, null, null, new google.maps.Size(locations[i][4],locations[i][5])),
+					map: map,
+					optimised: false,
+					position: new google.maps.LatLng(locations[i][1], locations[i][2])
+				});
+				
+				i++;
+			}
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+   
+   
+   /*=mapOptions 
+    */
+   function mapOptions()
+   {
+   	return {
+   		center: new google.maps.LatLng(51.317715, -0.55761),
+   		disableDefaultUI: true,
+   		mapTypeId: google.maps.MapTypeId.ROADMAP,
+   		styles: [
+   		{
+   			"featureType": "landscape.natural.terrain",
+   			"elementType": "geometry",
+   			"stylers": [
+   			{
+   				"visibility": "off"
+   			}]
+   		},
+   		{
+   			"featureType": "poi",
+   			"elementType": "labels",
+   			"stylers": [
+   			{
+   				"visibility": "off"
+   			}]
+   		},
+   		{
+   			"featureType": "poi.business",
+   			"stylers": [
+   			{
+   				"visibility": "off"
+   			}]
+   		},
+   		{
+   			"featureType": "road",
+   			"elementType": "geometry.stroke",
+   			"stylers": [
+   			{
+   				"visibility": "off"
+   			}]
+   		},
+   		{
+   			"featureType": "road",
+   			"elementType": "labels",
+   			"stylers": [
+   			{
+   				"visibility": "on"
+   			}]
+   		}],
+   		zoom: 16
+   	};
+   }
+   
+   
+   /*=mapMarkers 
+    */
+   function mapMarkers()
+   {
+   	return [
+   		['Pin Up Curls', 51.317715, -0.55761, "shop", 120, 144],
+   		['Heathside Car Park', 51.3164834, -0.5568375999999999, "parking",  40, 48]
+   	];
+   }
+ </script>
+</head>
+
+<body>
