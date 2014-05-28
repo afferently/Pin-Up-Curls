@@ -7,33 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pin Up Curls ~ Gallery</title>
   <!--[if IE]>
-  <script src='assets/js/html5shiv.js'></script>
+  <script src='eab1c6001234d573d8789d1903ebacf2.js'></script>
   <![endif]-->
-	<link rel='stylesheet' href='assets/css/normalize.css'>
-<link rel='stylesheet' href='assets/css/style.css'>
+	<link rel='stylesheet' href='a28e578e8cb04668000d17b6eae1f349.css'>
 	
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
 	<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="assets/favicon-196x196.png" sizes="196x196">
 	<link rel="icon" type="image/png" href="assets/favicon-160x160.png" sizes="160x160">
