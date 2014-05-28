@@ -275,11 +275,13 @@ a:visited {
 					}
 					
 					.section-title.highlights {
-						max-height: 8.5em;
+						/*max-height: 8.5em;*/
+						height: 8.5em;
 					}
 					
 					.section-title.special {
-						max-height: 13.5em;
+						/*max-height: 13.5em;*/
+						height: 13.5em;
 					}
 					
 					
