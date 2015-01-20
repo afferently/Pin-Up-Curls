@@ -12,8 +12,31 @@
 	<link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
-  <link rel='stylesheet' href='30b28f32baef692fa239d50ccae7a49a.css'>
-    
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+        
   <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJSEvOEuVKcVnPELZS5tKSLqY7zcWL_uE&sensor=true"></script>
 	<script type="text/javascript">
