@@ -10,11 +10,31 @@
   <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <!--[if IE]>
-  <script src='eab1c6001234d573d8789d1903ebacf2.js'></script>
-  <![endif]-->
-  <link rel='stylesheet' href='a28e578e8cb04668000d17b6eae1f349.css'>
-   
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
 </head>
 
 <body>
@@ -22,7 +42,7 @@
 		<div class="logo-puc-logo-unisex-hair-parlour">
 			<div class="contains-logo-puc">
 				<a href="#menu">
-					<img class="logo-puc" src="assets/img/Pin-Up-Curls.png" alt="Pin Up Curls">
+					<img class="logo-puc" src="assets/img/pin-up-curls-logo.svg" alt="Pin Up Curls">
 				</a>
 				<div class="contains-logo-unisex-hair-parlour">
 					<a href="#menu">
@@ -81,8 +101,9 @@
 			<img class="link-to-menu-image" src="assets/img/Menu-title.png" alt="Menu">
 		</a>
 	</div>
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src='2ccab2d17247fafd74dd5ffe90ebe224.js'></script>
+	<script src='assets/js/jquery-2.1.1.min.js'></script>
+<script src='assets/js/plugins.js'></script>
+<script src='assets/js/app.js'></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
