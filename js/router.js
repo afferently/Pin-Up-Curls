@@ -77,7 +77,7 @@ var router = (function() {
 
 		// Replace bottom with response and set height to 100%.
 		$bottom.innerHTML = response;
-		$bottom.classList.add('h-100');
+		$bottom.classList.add('min-h-100');
 
 		if (route === 'map') {
 			$bottom.classList.add('flex');
