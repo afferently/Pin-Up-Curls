@@ -4,9 +4,9 @@ main.flex.justify-center.pa4.pa5-ns
     img.w5.w-70-ns.pb4.pb5-ns(src="img/prices-title.png")
     for section in sections
       // Section Title.
-      img.w-50-ns.pb4.pb5-ns(src="img/prices-#{ section.title }-title.png")
+      img.w-70.w-50-ns.pb4.pb5-ns(src="img/prices-#{ section.title }-title.png")
       for treatment, index in section.treatments
-        .flex.w-100.pr3-ns.pl3-ns.tl(class=index === section.treatments.length - 1 ? "mb5-ns pb5-ns" : "mb4-ns pb4-ns bb b--gold")
+        .flex.w-100.pr1.pl1.pr3-ns.pl3-ns.tl(class=index === section.treatments.length - 1 ? "mb4 mb5-ns pb4 pb5-ns" : "mb3 mb4-ns pb3 pb4-ns bb b--gold")
           // Treatment Title.
           .flex-auto.flex.flex-column.f3.f1-ns.lh-copy !{ treatment.title }
           // Treatment Price.
@@ -19,7 +19,7 @@ main.flex.justify-center.pa4.pa5-ns
             else
               // £££.
               span.self-start.f3.f1-ns £
-              span.self-baseline.flex.justify-end.f1.f1-ns(style="font-size: 8.2rem; width: 1.25em") #{ treatment.price.pounds }
+              span.self-baseline.flex.justify-end.f-5.f-6-ns(style="width: 1.25em") #{ treatment.price.pounds }
               if (treatment.price.pence === '00')
                 // Hide Pence.
                 span.o-0.self-baseline.f3.f1-ns #{ treatment.price.pence }

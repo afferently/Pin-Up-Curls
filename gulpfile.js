@@ -1,4 +1,6 @@
 var gulp          = require('gulp');
+var rename        = require('gulp-rename');
+var cleanCSS      = require('gulp-clean-css');
 var minify        = require('gulp-minify');
 var imagemin      = require('gulp-imagemin');
 
@@ -27,3 +29,10 @@ gulp.task('compress', function() {
 });
 
 gulp.task('build', ['images', 'compress']);
+
+gulp.task('minify-css', function() {
+  return gulp.src('css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('css/'));
+});
