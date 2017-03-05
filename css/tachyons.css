@@ -244,7 +244,7 @@ template { display: none; }
 [hidden] { display: none; }
 /* Modules */
 /*
- 
+
   BOX SIZING
 
 */
@@ -829,8 +829,8 @@ code, .code { font-family: Consolas, monaco, monospace; }
    Docs: http://tachyons.io/docs/themes/skins/
 
    Classes for setting foreground and background colors on elements.
-   If you haven't declared a border color, but set border on an element, it will 
-   be set to the current text color. 
+   If you haven't declared a border color, but set border on an element, it will
+   be set to the current text color.
 
 */
 /* Text colors */
@@ -1147,8 +1147,8 @@ code, .code { font-family: Consolas, monaco, monospace; }
  * These generally are too large for mobile
  * so be careful using them on smaller screens.
  * */
-.f-6, .f-headline { font-size: 6rem; }
-.f-5, .f-subheadline { font-size: 5rem; }
+.f-6, .f-headline { font-size: 8.2rem; }
+.f-5, .f-subheadline { font-size: 4rem; }
 /* Type Scale */
 .f1 { font-size: 3rem; }
 .f2 { font-size: 2.25rem; }
@@ -1217,16 +1217,16 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .grow-large:active { -webkit-transform: scale( .95 ); transform: scale( .95 ); }
 /* Add pointer on hover */
 .pointer:hover { cursor: pointer; }
-/* 
+/*
    Add shadow on hover.
 
-   Performant box-shadow animation pattern from 
-   http://tobiasahlin.com/blog/how-to-animate-box-shadow/ 
+   Performant box-shadow animation pattern from
+   http://tobiasahlin.com/blog/how-to-animate-box-shadow/
 */
 .shadow-hover { cursor: pointer; position: relative; -webkit-transition: all .5s cubic-bezier( .165, .84, .44, 1 ); transition: all .5s cubic-bezier( .165, .84, .44, 1 ); }
 .shadow-hover::after { content: ''; box-shadow: 0 0 16px 2px rgba( 0, 0, 0, .2 ); opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; -webkit-transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); }
 .shadow-hover:hover::after, .shadow-hover:focus::after { opacity: 1; }
-/* Combine with classes in skins and skins-pseudo for 
+/* Combine with classes in skins and skins-pseudo for
  * many different transition possibilities. */
 .bg-animate, .bg-animate:hover, .bg-animate:focus { -webkit-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out; }
 /*@import './_z-index';*/
@@ -1548,7 +1548,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .tl-ns { text-align: left; }
  .tr-ns { text-align: right; }
  .tc-ns { text-align: center; }
- .f-6-ns, .f-headline-ns { font-size: 6rem; }
+ .f-6-ns, .f-headline-ns { font-size: 8.2rem; }
  .f-5-ns, .f-subheadline-ns { font-size: 5rem; }
  .f1-ns { font-size: 3rem; }
  .f2-ns { font-size: 2.25rem; }
@@ -1820,7 +1820,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .tl-m { text-align: left; }
  .tr-m { text-align: right; }
  .tc-m { text-align: center; }
- .f-6-m, .f-headline-m { font-size: 6rem; }
+ .f-6-m, .f-headline-m { font-size: 8.2rem; }
  .f-5-m, .f-subheadline-m { font-size: 5rem; }
  .f1-m { font-size: 3rem; }
  .f2-m { font-size: 2.25rem; }
@@ -2086,7 +2086,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .tl-l { text-align: left; }
  .tr-l { text-align: right; }
  .tc-l { text-align: center; }
- .f-6-l, .f-headline-l { font-size: 6rem; }
+ .f-6-l, .f-headline-l { font-size: 8.2rem; }
  .f-5-l, .f-subheadline-l { font-size: 5rem; }
  .f1-l { font-size: 3rem; }
  .f2-l { font-size: 2.25rem; }
@@ -2095,4 +2095,3 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f5-l { font-size: 1rem; }
  .f6-l { font-size: .875rem; }
 }
-
