@@ -25,11 +25,11 @@
           "pence": "00"
         }
       }, {
-        "title": "Wash, Cut &<br>Blow Dry",
+        "title": "Wash &<br>Blow Dry",
         "price": {
           "from": true,
-          "pounds": "15",
-          "pence": "50"
+          "pounds": "21",
+          "pence": "00"
         }
       }]
     }, {
@@ -37,7 +37,7 @@
       "treatments": [{
         "title": "Wash, Cut &<br>Rough Dry",
         "price": {
-          "pounds": "14",
+          "pounds": "15",
           "pence": "50"
         }
       }]
