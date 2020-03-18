@@ -4,18 +4,18 @@ const cleanCSS = require("gulp-clean-css");
 const minify = require("gulp-minify");
 const imagemin = require("gulp-imagemin");
 
-function images(cb) {
-	return src("img/*")
-		.pipe(
-			imagemin({
-				multipass: true,
-				optimizationLevel: 7,
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }]
-			})
-		)
-		.pipe(dest("www/img"));
-}
+// function images(cb) {
+// 	return src("img/*")
+// 		.pipe(
+// 			imagemin({
+// 				multipass: true,
+// 				optimizationLevel: 7,
+// 				progressive: true,
+// 				svgoPlugins: [{ removeViewBox: false }]
+// 			})
+// 		)
+// 		.pipe(dest("www/img"));
+// }
 
 function compress(cb) {
 	return src("js/*.js")
@@ -32,7 +32,7 @@ function compress(cb) {
 		.pipe(dest("www/js"));
 }
 
-exports.default = parallel(images, compress);
+exports.default = parallel(compress);
 
 // gulp.task('minify-css', function() {
 //   return gulp.src('css/*.css')
