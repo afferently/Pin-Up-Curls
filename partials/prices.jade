@@ -13,16 +13,14 @@ main.flex.justify-center.pa4.pa5-ns
           .flex-auto.flex.justify-end.abril-optimised
             if (!treatment.price)
               // Please Call.
-              span.flex.flex-column.items-center.w-100
-                span.pb3.f3.f1-ns.center PLEASE
+              a.flex.flex-column.items-center.w-100(href="tel:01483725723")
+                span.pb3-ns.f3.f1-ns.center PLEASE
                 span.f3.f1-ns.center CALL
             else
               // £££.
               span.self-start.f3.f1-ns £
               span.self-baseline.flex.justify-end.f-5.f-6-ns(style="width: 1.25em") #{ treatment.price.pounds }
-              if (treatment.price.pence === '00')
-                // Hide Pence.
-                span.o-0.self-baseline.f3.f1-ns #{ treatment.price.pence }
-              else
+              if (treatment.price.pence !== '00')
                 // Show Pence.
-                span.self-baseline.f3.f1-ns #{ treatment.price.pence }
+                span.self-baseline.f3.f1-ns .#{ treatment.price.pence }
+    != partial("cancellationPolicy")

@@ -1,113 +1,139 @@
 {
-  "contact": {
-    "layout": false
-  },
-  "gallery": {
-    "layout": false
-  },
-  "map": {
-    "layout": false
-  },
-  "prices": {
-    "layout": false,
-    "sections": [{
-      "title": "ladies",
-      "treatments": [{
-        "title": "Wash, Cut &<br>Blow Dry",
-        "price": {
-          "pounds": "32",
-          "pence": "00"
-        }
-      }, {
-        "title": "Wash, Cut &<br>Rough Dry",
-        "price": {
-          "pounds": "26",
-          "pence": "00"
-        }
-      }, {
-        "title": "Wash &<br>Blow Dry",
-        "price": {
-          "from": true,
-          "pounds": "21",
-          "pence": "00"
-        }
-      }]
-    }, {
-      "title": "children",
-      "treatments": [{
-        "title": "Wash, Cut &<br>Rough Dry",
-        "price": {
-          "pounds": "15",
-          "pence": "50"
-        }
-      }]
-    }, {
-      "title": "gentlemen",
-      "treatments": [{
-        "title": "Wash, Cut &<br>Rough Dry",
-        "price": {
-          "pounds": "21",
-          "pence": "00"
-        }
-      }]
-    }, {
-      "title": "highlights",
-      "treatments": [{
-        "title": "Full<br>Head Foil",
-        "price": {
-          "from": true,
-          "pounds": "75",
-          "pence": "00"
-        }
-      }, {
-        "title": "Half<br>Head Foil",
-        "price": {
-          "from": true,
-          "pounds": "51",
-          "pence": "00"
-        }
-      }, {
-        "title": "T Bar<br>Foil",
-        "price": {
-          "from": true,
-          "pounds": "35",
-          "pence": "00"
-        }
-      }]
-    }, {
-      "title": "colouring",
-      "treatments": [{
-        "title": "Full<br> Head Tint",
-        "price": {
-          "pounds": "41",
-          "pence": "00"
-        }
-      }, {
-        "title": "Root Tint",
-        "price": {
-          "from": true,
-          "pounds": "31",
-          "pence": "00"
-        }
-      }, {
-        "title": "Semi Permanent<br> Colour",
-        "price": {
-          "pounds": "34",
-          "pence": "00"
-        }
-      }, {
-        "title": "Colour<br> Corrections",
-        "price": null
-      }]
-    }, {
-      "title": "special",
-      "treatments": [{
-        "title": "Deep conditioning<br>treatment with another<br>service",
-        "price": {
-          "pounds": "10",
-          "pence": "00"
-        }
-      }]
-    }]
-  }
+	"contact": {
+		"layout": false
+	},
+	"gallery": {
+		"layout": false
+	},
+	"map": {
+		"layout": false
+	},
+	"prices": {
+		"layout": false,
+		"sections": [
+			{
+				"title": "ladies",
+				"treatments": [
+					{
+						"title": "Wash, Cut &<br>Blow Dry",
+						"price": {
+							"pounds": "34",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Wash, Cut &<br>Rough Dry",
+						"price": {
+							"pounds": "28",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Wash &<br>Blow Dry",
+						"price": {
+							"from": true,
+							"pounds": "23",
+							"pence": "00"
+						}
+					}
+				]
+			},
+			{
+				"title": "children",
+				"treatments": [
+					{
+						"title": "Wash, Cut &<br>Rough Dry",
+						"price": {
+							"pounds": "16",
+							"pence": "50"
+						}
+					}
+				]
+			},
+			{
+				"title": "gentlemen",
+				"treatments": [
+					{
+						"title": "Wash, Cut &<br>Rough Dry",
+						"price": {
+							"pounds": "23",
+							"pence": "00"
+						}
+					}
+				]
+			},
+			{
+				"title": "highlights",
+				"treatments": [
+					{
+						"title": "Full<br>Head Foil",
+						"price": {
+							"from": true,
+							"pounds": "78",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Half<br>Head Foil",
+						"price": {
+							"from": true,
+							"pounds": "54",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "T Bar<br>Foil",
+						"price": {
+							"from": true,
+							"pounds": "37",
+							"pence": "00"
+						}
+					}
+				]
+			},
+			{
+				"title": "colouring",
+				"treatments": [
+					{
+						"title": "Full<br> Head Tint",
+						"price": {
+							"pounds": "44",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Root Tint",
+						"price": {
+							"from": true,
+							"pounds": "34",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Semi Permanent<br> Colour",
+						"price": {
+							"pounds": "44",
+							"pence": "00"
+						}
+					},
+					{
+						"title": "Colour<br> Corrections",
+						"price": null
+					}
+				]
+			},
+			{
+				"title": "special",
+				"treatments": [
+					{
+						"title": "Deep conditioning<br>treatment with another<br>service",
+						"price": {
+							"pounds": "10",
+							"pence": "00"
+						}
+					}
+				]
+			}
+		]
+	}
 }
