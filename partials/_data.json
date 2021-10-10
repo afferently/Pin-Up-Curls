@@ -17,14 +17,14 @@
 					{
 						"title": "Wash, Cut &<br>Blow Dry",
 						"price": {
-							"pounds": "34",
+							"pounds": "39",
 							"pence": "00"
 						}
 					},
 					{
 						"title": "Wash, Cut &<br>Rough Dry",
 						"price": {
-							"pounds": "28",
+							"pounds": "32",
 							"pence": "00"
 						}
 					},
@@ -32,7 +32,7 @@
 						"title": "Wash &<br>Blow Dry",
 						"price": {
 							"from": true,
-							"pounds": "23",
+							"pounds": "28",
 							"pence": "00"
 						}
 					}
@@ -44,8 +44,8 @@
 					{
 						"title": "Wash, Cut &<br>Rough Dry",
 						"price": {
-							"pounds": "16",
-							"pence": "50"
+							"pounds": "19",
+							"pence": "00"
 						}
 					}
 				]
@@ -56,7 +56,7 @@
 					{
 						"title": "Wash, Cut &<br>Rough Dry",
 						"price": {
-							"pounds": "23",
+							"pounds": "28",
 							"pence": "00"
 						}
 					}
@@ -69,7 +69,7 @@
 						"title": "Full<br>Head Foil",
 						"price": {
 							"from": true,
-							"pounds": "78",
+							"pounds": "82",
 							"pence": "00"
 						}
 					},
@@ -77,7 +77,7 @@
 						"title": "Half<br>Head Foil",
 						"price": {
 							"from": true,
-							"pounds": "54",
+							"pounds": "57",
 							"pence": "00"
 						}
 					},
@@ -85,7 +85,7 @@
 						"title": "T Bar<br>Foil",
 						"price": {
 							"from": true,
-							"pounds": "37",
+							"pounds": "41",
 							"pence": "00"
 						}
 					}
@@ -97,7 +97,7 @@
 					{
 						"title": "Full<br> Head Tint",
 						"price": {
-							"pounds": "44",
+							"pounds": "48",
 							"pence": "00"
 						}
 					},
@@ -105,14 +105,14 @@
 						"title": "Root Tint",
 						"price": {
 							"from": true,
-							"pounds": "34",
+							"pounds": "38",
 							"pence": "00"
 						}
 					},
 					{
 						"title": "Semi Permanent<br> Colour",
 						"price": {
-							"pounds": "44",
+							"pounds": "48",
 							"pence": "00"
 						}
 					},
