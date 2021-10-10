@@ -1,1 +1,96 @@
-var router=function(){var e=document.querySelector("[data-router=top]"),t=document.querySelector("[data-router=bottom]"),a=function(e){if(e.target.dataset.router){e.preventDefault();var t=e.target.dataset.router,a=new XMLHttpRequest,r="partials/"+t;a.open("GET",r,!0),a.setRequestHeader("Pragma","no-cache"),a.onreadystatechange=function(e){return function(){4===a.readyState&&(200===a.status?n(a.response,e):console.log(a.response))}}(t),a.send()}},r=function(t){"menu"===t.target.dataset.router&&(t.preventDefault(),e.scrollIntoView({behavior:"smooth"}))},n=function(e,a){t.innerHTML=e,t.classList.add("min-h-100"),"map"===a&&(t.classList.add("flex"),t.classList.add("flex-column")),t.scrollIntoView({behavior:"smooth"}),"map"===a&&map.init()};e.addEventListener("click",a,!1),t.addEventListener("click",r,!1)}();
+var router = (function() {
+
+	var $top = document.querySelector('[data-router=top]'),
+			$bottom = document.querySelector('[data-router=bottom]');
+
+
+	var init = function() {
+
+		$top.addEventListener('click', route, false);
+		$bottom.addEventListener('click', menuButton, false);
+	}
+
+	var route = function(e) {
+
+		if (!e.target.dataset.router) {
+			return;
+		}
+
+		// Prevent link from opening.
+		e.preventDefault();
+
+		// Get route from link.
+		var route = e.target.dataset.router;
+
+		// Push route into browser history & update URL in browser bar.
+		//history.pushState(route, null, route)
+
+		// Begin request.
+		var request = new XMLHttpRequest(),
+				requestURL = 'partials/' + route;
+
+		request.open('GET', requestURL, true);
+		request.setRequestHeader('Pragma', 'no-cache');
+		request.onreadystatechange = (function (route) {
+
+				return function () {
+
+						if (request.readyState === 4) {
+
+								// If Successful.
+								if (request.status === 200) {
+
+										// If URL isn't the current message.
+										//if (router !== history.state) {
+										//    return;
+										//}
+
+									renderBottomFromResponse(request.response, route);
+								}
+								else {
+
+									// Log error respsonse
+									console.log(request.response);
+								}
+						}
+				};
+		})(route);
+
+		// Send Request.
+		request.send();
+	}
+
+	var menuButton = function(e) {
+
+		if (e.target.dataset.router !== 'menu') {
+			return;
+		}
+
+		// Prevent link from opening.
+		e.preventDefault();
+
+		// Smoothly scroll menu in from the top.
+		$top.scrollIntoView({ behavior: 'smooth' });
+	}
+
+	var renderBottomFromResponse = function(response, route) {
+
+		// Replace bottom with response and set height to 100%.
+		$bottom.innerHTML = response;
+		$bottom.classList.add('min-h-100');
+
+		if (route === 'map') {
+			$bottom.classList.add('flex');
+			$bottom.classList.add('flex-column');
+		}
+
+		// Smoothly scroll rendered response in from the bottom.
+		$bottom.scrollIntoView({ behavior: 'smooth' });
+
+		if (route === 'map') {
+			map.init();
+		}
+	}
+
+	init();
+})()
